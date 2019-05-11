@@ -8,7 +8,7 @@ Npm: https://www.npmjs.com/package/filemk
 
 ## Install
 
-``javascript
+```javascript
     npm install -g filemk
 ```
 
