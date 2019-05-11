@@ -14,6 +14,9 @@
     "makefile",
     "filemake"
   ],
+  "bin": {
+    "mk": "./main.js"
+  },
   "author": "Wisdom Ogwu (iammadab)",
   "license": "ISC",
   "devDependencies": {
