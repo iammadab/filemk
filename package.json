@@ -1,0 +1,19 @@
+{
+  "name": "filemk",
+  "version": "1.0.0",
+  "description": "A simple tool to create files from the command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mk",
+    "filemk",
+    "file",
+    "create",
+    "makefile",
+    "filemake"
+  ],
+  "author": "Wisdom Ogwu (iammadab)",
+  "license": "ISC"
+}
