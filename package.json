@@ -15,7 +15,8 @@
     "filemake"
   ],
   "bin": {
-    "mk": "./main.js"
+    "mk": "./main.js",
+    "filemk": "./main.js"
   },
   "author": "Wisdom Ogwu (iammadab)",
   "license": "ISC",
