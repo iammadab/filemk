@@ -1,10 +1,13 @@
 # filemk
 
-A simple tool for creating files from the command line
+A simple tool for creating files from the command line.
 
 Github: https://github.com/iammadab/filemk
 
 Npm: https://www.npmjs.com/package/filemk
+
+## Inspiration
+I was inspired to create this tool, becuase I couldn't find a good way to create files from the windows terminal. Although this is a cross platform tool and can work on any os, it was built with the windows user in mind.
 
 ## Install
 
