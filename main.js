@@ -1,11 +1,11 @@
 #! /usr/bin/env node
 
-const { fileExists, makeFile } = require("./lib/util")
+const { fileDoesNotExist, makeFile } = require("./lib/util")
 
 let args = process.argv, [a, b, ...files] = args
 
 files.forEach(file => {
-	fileExists(file)
+	fileDoesNotExist(file)
 		.then(makeFile)
 		.catch(handleErrors)
 
