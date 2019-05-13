@@ -36,28 +36,28 @@ describe("Utility Module", () => {
 	})
 
 
-	// describe("makeFile function", () => {
+	describe("makeFile function", () => {
 
-	// 	it("Writes an empty string to the file", () => {
+		it("Writes an empty string to the file", () => {
 
-	// 		let result1 = makeFile(writeFileMock, resolveFilePathMock, "testFile.html"),
-	// 			result2 = makeFile(writeFileMock, resolveFilePathMock, "me.txt")
+			let result1 = makeFile(writeFileMock, resolveFilePathMock, "testFile.html"),
+				result2 = makeFile(writeFileMock, resolveFilePathMock, "me.txt")
 
-	// 		assert.equal(result1.content, "")
-	// 		assert.equal(result2.content, "")
+			assert.equal(result1.content, "")
+			assert.equal(result2.content, "")
 
-	// 	})
+		})
 
-	// 	it("writes to the correct file", () => {
+		it("writes to the correct file", () => {
 
-	// 		let result1 = makeFile(writeFileMock, resolveFilePathMock, "testFile.html"),
-	// 			result2 = makeFile(writeFileMock, resolveFilePathMock, "me.txt")
+			let result1 = makeFile(writeFileMock, resolveFilePathMock, "testFile.html"),
+				result2 = makeFile(writeFileMock, resolveFilePathMock, "me.txt")
 
-	// 		assert.equal(result1.filePath, "testFile.html")
-	// 		assert.equal(result2.filePath, "me.txt")
+			assert.equal(result1.filePath, "testFile.html")
+			assert.equal(result2.filePath, "me.txt")
 
-	// 	})
+		})
 
-	// })
+	})
 
 })
