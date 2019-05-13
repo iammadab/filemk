@@ -4,7 +4,8 @@
   "description": "A simple tool to create files from the command line",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha --watch __tests__ lib"
+    "test-watch": "node ./node_modules/mocha/bin/mocha --watch __tests__ lib",
+    "test": "node ./node_modules/mocha/bin/mocha __tests__"
   },
   "keywords": [
     "mk",
