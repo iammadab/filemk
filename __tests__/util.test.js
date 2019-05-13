@@ -6,7 +6,7 @@ const {
 	writeFileMock
 } = require("./mock")
 
-const { fileDoesNotExist, makeFile, pipeline } = require("../lib/util")
+const { fileDoesNotExist, makeFile, pipeline, partial } = require("../lib/util")
 
 describe("Utility Module", () => {
 
@@ -101,6 +101,41 @@ describe("Utility Module", () => {
 			assert.equal(chain(5), 30)
 
 		})
+
+	})
+
+
+
+
+	describe("partial function", () => {
+
+		const add = (a, b) => a + b,
+			  product = (a, b, c) => a * b * c
+
+		it("should return undefined if a function is not passed", () => {
+
+			assert.isNull(partial(2))
+			assert.isNull(partial("wisd"))
+			assert.isNull(partial({ a: 1}))
+
+		})
+
+		it("should return a function only if first arg is a function", () => {
+
+			assert.equal(typeof partial(add, 2), "function")
+			assert.equal(typeof partial(a => a), "function")
+
+		})
+
+		it("should prefill a function with the additional arguments", () => {
+
+			let add2 = partial(add, 2), add50 = partial(add, 50), productTest = partial(product, 2, 3)
+			assert.equal(add2(5), 7)
+			assert.equal(add50(34), 84)
+			assert.equal(productTest(4), 24)
+
+		})
+
 
 	})
 
