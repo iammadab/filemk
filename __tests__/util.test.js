@@ -3,15 +3,32 @@ const assert = require("chai").assert
 const { 
 	existsMock, 
 	resolveFilePathMock,
-	writeFileMock
+	writeFileMock,
+	fileDoesNotExistFnMock,
+	fileWriterMock,
+	errorHandlerMock
 } = require("./mock")
 
-const { fileDoesNotExist, makeFile, pipeline, partial } = require("../lib/util")
+const { makeFiles, fileDoesNotExist, makeFile, pipeline, partial, existsHandler } = require("../lib/util")
 
 describe("Utility Module", () => {
 
 
+	describe("makeFiles function", () => {
 
+		it("creates the files based on the array of filenames", (done) => {
+
+			let files = []
+			makeFiles(fileDoesNotExistFnMock, fileWriterMock(files), errorHandlerMock, ["me.js", "you.js"])
+				.then(() => {
+					assert.equal(files[0], "me.js")
+					assert.equal(files[1], "you.js")
+					done()
+				})
+
+		})
+
+	})
 
 
 	describe("fileDoesNotExist function", () => {
@@ -136,6 +153,25 @@ describe("Utility Module", () => {
 
 		})
 
+
+	})
+
+	describe("existsHandler function", () => {
+
+		it("does nothing if error code is FILE_EXISTS", () => {
+
+			const error = new Error()
+			error.code = "FILE_EXISTS"
+
+			assert.isNotOk(existsHandler(error))
+
+		})
+
+		it("throws an error if passed any other error", () => {
+
+			assert.throws(() => existsHandler(new Error()))
+
+		})
 
 	})
 

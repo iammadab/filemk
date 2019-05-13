@@ -1,8 +1,7 @@
 #! /usr/bin/env node
 
-
-const { makeFiles } = require("./lib/util")
+const { makeFilesFn } = require("./lib/util")
 
 let [env, src, ...fileList] = process.argv
 
-makeFiles(fileList)
+makeFilesFn(fileList)
