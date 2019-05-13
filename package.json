@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test-watch": "node ./node_modules/mocha/bin/mocha --watch __tests__ lib",
-    "test": "node ./node_modules/mocha/bin/mocha __tests__"
+    "test": "node ./node_modules/mocha/bin/mocha __tests__",
+    "coverage": "nyc npm run test report --reporter=text-lcov | coveralls" 
   },
   "keywords": [
     "mk",
@@ -23,6 +24,8 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4"
+    "coveralls": "^3.0.3",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
   }
 }

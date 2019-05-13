@@ -4,3 +4,5 @@ node_js:
 before_intall:
   - npm i -g npm@version-number
 cache: npm
+after_success:
+  - npm run coverage
