@@ -6,9 +6,13 @@ const {
 	writeFileMock
 } = require("./mock")
 
-const { fileDoesNotExist, makeFile } = require("../lib/util")
+const { fileDoesNotExist, makeFile, pipeline } = require("../lib/util")
 
 describe("Utility Module", () => {
+
+
+
+
 
 	describe("fileDoesNotExist function", () => {
 
@@ -36,6 +40,9 @@ describe("Utility Module", () => {
 	})
 
 
+
+
+
 	describe("makeFile function", () => {
 
 		it("Writes an empty string to the file", () => {
@@ -59,5 +66,43 @@ describe("Utility Module", () => {
 		})
 
 	})
+
+
+
+
+
+	describe("pipeline function", () => {
+
+		const double = a => a * 2,
+			  triple = a => a * 3
+
+		it("returns a function", () => {
+
+			let chain = pipeline(double, triple)
+
+			assert.equal(typeof chain, "function")
+
+		})
+
+		it("returns a function that spits back the input if no argument is passed", () => {
+
+			let chain = pipeline()
+
+			assert.equal(chain("wisdom"), "wisdom")
+
+		})
+
+		it("It pipes its input to all its composed functions", () => {
+
+			let chain = pipeline(double, triple),
+				chain2 = pipeline(triple, double)
+
+			assert.equal(chain(2), 12)
+			assert.equal(chain(5), 30)
+
+		})
+
+	})
+
 
 })
