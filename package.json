@@ -7,7 +7,7 @@
     "test-watch": "node ./node_modules/mocha/bin/mocha --watch __tests__ lib",
     "test": "node ./node_modules/mocha/bin/mocha __tests__",
     "cov": "nyc npm run test",
-    "coverage": "nyc npm run test --reporter=text-lcov | coveralls" 
+    "coverage": "nyc npm run test report --reporter=text-lcov | coveralls" 
   },
   "keywords": [
     "mk",
