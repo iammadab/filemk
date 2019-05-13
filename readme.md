@@ -1,5 +1,7 @@
 # filemk
 
+[![Build Status](https://travis-ci.org/iammadab/filemk.svg?branch=master)](https://travis-ci.org/iammadab/filemk)
+
 A simple tool for creating files from the command line.
 
 Github: https://github.com/iammadab/filemk
