@@ -2,16 +2,32 @@
 
 const { fileDoesNotExist, makeFile } = require("./lib/util")
 
-let args = process.argv, [a, b, ...files] = args
+let [env, src, ...fileList] = process.argv
 
-files.forEach(file => {
-	fileDoesNotExist(file)
-		.then(makeFile)
-		.catch(handleErrors)
+makeFiles(fileList)
 
 
-	function handleErrors(error){
-		if(error.code == "FILE_EXISTS")
-			return
-	}
-})
+
+
+
+
+
+
+
+
+
+function makeFiles(files){
+
+	files.forEach(file => {
+		fileDoesNotExist(file)
+			.then(makeFile)
+			.catch(handleErrors)
+
+
+		function handleErrors(error){
+			if(error.code == "FILE_EXISTS")
+				return
+		}
+	})
+
+}
