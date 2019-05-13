@@ -6,8 +6,8 @@
   "scripts": {
     "test-watch": "node ./node_modules/mocha/bin/mocha --watch __tests__ lib",
     "test": "node ./node_modules/mocha/bin/mocha __tests__",
-    "coverage": "nyc npm run test",
-    "coveralls-coverage": "nyc npm run test --reporter=text-lcov | coveralls" 
+    "cov": "nyc npm run test",
+    "coverage": "nyc npm run test --reporter=text-lcov | coveralls" 
   },
   "keywords": [
     "mk",

@@ -5,4 +5,4 @@ before_intall:
   - npm i -g npm@version-number
 cache: npm
 after_success:
-  - npm run coveralls-coverage
+  - npm run coverage
