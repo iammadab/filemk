@@ -1,7 +1,7 @@
 # filemk
 
 [![Build Status](https://travis-ci.org/iammadab/filemk.svg?branch=master)](https://travis-ci.org/iammadab/filemk)
-[![Coverage Status](https://coveralls.io/repos/github/iammadab/filemk/badge.svg?branch=master)](https://coveralls.io/github/iammadab/filemk?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/iammadab/filemk/badge.svg)](https://coveralls.io/github/iammadab/filemk?branch=master)
 
 A simple tool for creating files from the command line.
 
