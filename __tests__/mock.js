@@ -8,7 +8,7 @@ mock.existsMock = (filename) => {
 		else
 			resolve(false)
 	})
-}
+} 
 
 mock.resolveFilePathMock = (filename) => filename
 
